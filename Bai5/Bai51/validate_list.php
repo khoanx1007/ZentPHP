@@ -1,6 +1,6 @@
 <?php
   session_start();
-  $validate = $_SESSION['validate'];
+  $validates = $_SESSION['validates'];
   echo "<pre>";
     print_r($_SESSION);
   echo "</pre>";
@@ -32,17 +32,20 @@
             </tr>
             </thead>
             <tbody>
+                <?php foreach($validates as $validate)
+                { ?>
                 <tr>
-                <td>Họ Tên</td>
-                <td>Giới Tính</td>
-                <td>Ngày Sinh</td>
-                <td>Quê Quán</td>
-                <td>Ngoại Ngữ</td>
-                <td>Thông tin thêm</td>
+                    <td><?= $validate['name'] ?></td>
+                    <td><?= $validate['sex'] ?></td>
+                    <td><?= $validate['date'] ?></td>
+                    <td><?= $validate['country'] ?></td>
+                    <td><?= $validate['lang[]'] ?></td>
+                    <td><?= $validate['info'] ?></td>
                 </tr>
+                <?php } ?>
             </tbody>
         </table>
-    </div>    `
+    </div>    
     <a href="clearall.php">Xoá thông tin</a>
 </body>
 </html>

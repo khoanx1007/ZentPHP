@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $validate = $_POST;
-    $_SESSION['validate'][] = $validate;
+    $validates  = $_POST;
+    $_SESSION['validates'][] = $validates;
     header('Location: validate_list.php')
 ?>

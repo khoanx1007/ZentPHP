@@ -17,9 +17,9 @@
             </div>
             <div class="form-group">
                 <label for="" class="h6">Giới tính:</label><br>
-                <input type="radio" name="gioi_tinh" value="Nam"> Nam
-                <input type="radio" name="gioi_tinh" value="Nữ"> Nữ
-                <input type="radio" name="gioi_tinh" value="Không Xác Định"> Không xác định
+                <input type="radio" name="sex" value="Nam"> Nam
+                <input type="radio" name="sex" value="Nữ"> Nữ
+                <input type="radio" name="sex" value="Không Xác Định"> Không xác định
             </div>
             <div class="form-group">
                 <label for="" class="h6">Ngày, tháng, năm sinh:</label><br>
@@ -31,9 +31,9 @@
             </div>
             <div class="form-group">
                 <label for="lang" class="h6">Ngoại ngữ: </label><br>
-                <input type="checkbox" name="ngon_ngu[]" value="eng"> Tiếng Anh
-                <input type="checkbox" name="ngon_ngu[]" value="fr"> Tiếng Pháp
-                <input type="checkbox" name="ngon_ngu[]" value="jpn"> Tiếng Nhật
+                <input type="checkbox" name="lang[]" value="eng"> Tiếng Anh
+                <input type="checkbox" name="lang[]" value="fr"> Tiếng Pháp
+                <input type="checkbox" name="lang[]" value="jpn"> Tiếng Nhật
             </div>
             <div class="form-group">
                 <label for="" class="h6">Thông tin thêm:</label><br>
