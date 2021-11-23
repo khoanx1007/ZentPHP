@@ -1,9 +1,6 @@
 <?php
   session_start();
   $validates = $_SESSION['validates'];
-  echo "<pre>";
-    print_r($_SESSION);
-  echo "</pre>";
     
 ?>
 <!DOCTYPE html>
@@ -20,6 +17,7 @@
 <body>
     <div class="container">
         <h2>Danh sách sản phẩm trong kho</h2>
+        <a href="clearall.php" class="h4">Xoá thông tin</a>
         <table class="table table-bordered">
             <thead>
             <tr>
@@ -45,7 +43,8 @@
                 <?php } ?>
             </tbody>
         </table>
+        
     </div>    
-    <a href="clearall.php">Xoá thông tin</a>
+    
 </body>
 </html>

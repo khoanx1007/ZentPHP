@@ -36,7 +36,7 @@
                 <input type="checkbox" name="lang[]" value="jpn"> Tiếng Nhật
             </div>
             <div class="form-group">
-                <label for="" class="h6">Thông tin thêm:</label><br>
+                <label for="" class="h6">Thông tin thêm: </label><br>
                 <textarea type="text" class="form-control" rows="3" cols="80" name="info"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Đăng Ký</button>
