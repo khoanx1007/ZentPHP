@@ -1,9 +1,9 @@
 <?php
-  session_start();
-  $products=array();
-  if(isset($_SESSION['products'])){
-    $products =$_SESSION['products'];
-  }
+session_start();
+$product_cart=array();
+if (isset($_SESSION['cart'])){
+  $product_cart=$_SESSION['cart'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,9 +17,8 @@
 </head>
 <body>
 <div class="container">
-  <h2>Danh sách sản phẩm trong kho</h2>
-  <a href="cart.php">Xem giỏ hàng</a> <br>
-  <a href="adding.php">Thêm mặt hàng</a>
+  <h2>Danh sách sản phẩm trong giỏ hàng</h2>
+  <a href="list.php">Xem trong kho</a>
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -27,24 +26,25 @@
         <th>Tên sản phẩm</th>
         <th>Số lượng</th>
         <th>Giá bán</th>
+        <th>Thành Tiền</th>
         <th>Ảnh sản phẩm</th>
         <th>Action</th>
       </tr>
     </thead>
     <tbody>
-        <?php foreach ($products as $key => $product){ ?>
+        <?php foreach ($product_cart as $key => $product){ ?>
           <tr>
               <td><?= $product['product_code'] ?></td>
               <td><?= $product['product_name'] ?></td>
               <td><?= $product['product_amount']?></td>
               <td><?= number_format($product['product_price']) ?></td>
+              <td><?= number_format($product['product_price']* $product['product_amount']) ?></td>
               <td> <img width="100px" height="100px" src="<?= $product['product_images']?>" alt=""> </td>
-              <td><a href="cart_process.php?id=<?= $key ?>" class="btn btn-primary">Thêm sản phẩm</a></td>
+              <td><a href="delete.php?id=<?= $key ?>" class="btn btn-warning">Xoá sản phẩm</a></td>
           </tr>
         <?php } ?>
     </tbody>
   </table>
-  <a href="destroy.php">Xoá toàn bộ kho</a>
 </div>
 
 </body>

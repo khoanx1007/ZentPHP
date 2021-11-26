@@ -1,5 +1,5 @@
 <?php
  $key= $_GET['id'];
- unset($_SESSION['validate'][$key]);
+ session_destroy();
  header('Location: validate_list.php')
 ?>
